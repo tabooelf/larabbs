@@ -179,6 +179,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         Barryvdh\Debugbar\ServiceProvider::class,
+        HieuLe\Active\ActiveServiceProvider::class,
 
     ],
 
@@ -231,6 +232,7 @@ return [
         'Captcha' => Mews\Captcha\Facades\Captcha::class,
 
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        'Active' => HieuLe\Active\Facades\Active::class,
 
     ],
 
