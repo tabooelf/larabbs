@@ -180,6 +180,7 @@ return [
 
         Barryvdh\Debugbar\ServiceProvider::class,
         HieuLe\Active\ActiveServiceProvider::class,
+        Mews\Purifier\PurifierServiceProvider::class,
 
     ],
 
@@ -230,9 +231,9 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Captcha' => Mews\Captcha\Facades\Captcha::class,
-
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
         'Active' => HieuLe\Active\Facades\Active::class,
+        'Purifier' => Mews\Purifier\Facades\Purifier::class,
 
     ],
 

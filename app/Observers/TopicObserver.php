@@ -19,6 +19,8 @@ class TopicObserver
         //
     }
     public function saving(Topic $topic){
+        //simdtor 自带转义储存可以不过勒
+        // $topic->body = clean($topic->body, 'default');
         $topic->excerpt = make_excerpt($topic->body);
     }
 }
