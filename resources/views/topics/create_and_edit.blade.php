@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('style')
+<link rel="stylesheet"  href="{{ asset('css/simditor.css') }}">
+@endsection
+
 @section('content')
 
 <div class="container">
@@ -29,7 +33,6 @@
 
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
-
                 <div class="form-group">
                 	<input class="form-control" type="text" name="title" id="title-field" value="{{ old('title', $topic->title ) }}" placeholder="请填写标题"  required="true" />
                 </div>
@@ -44,10 +47,8 @@
                 </div>
 
                 <div class="form-group">
-                	<textarea name="body" id="body-field" class="form-control" rows="3" placeholder="请输入至少三个字符的内容" required="true">{{ old('body', $topic->body ) }}</textarea>
+                    <textarea class="from-control" name="body" id="editor"  placeholder="正文从这里开始...">{{ old('body', $topic->body ) }}</textarea>
                 </div>
-
-
 
                     <div class="well well-sm">
                         <button type="submit" class="btn btn-primary">保存</button>
@@ -59,4 +60,18 @@
     </div>
 </div>
 
+@endsection
+
+@section('script')
+    <script type="text/javascript"  src="{{ asset('js/module.js') }}"></script>
+    <script type="text/javascript"  src="{{ asset('js/hotkeys.js') }}"></script>
+    <script type="text/javascript"  src="{{ asset('js/uploader.js') }}"></script>
+    <script type="text/javascript"  src="{{ asset('js/simditor.js') }}"></script>
+    <script>
+    $(document).ready(function(){
+        var editor = new Simditor({
+            textarea: $('#editor'),
+        });
+    });
+    </script>
 @endsection
