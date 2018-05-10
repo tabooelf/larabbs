@@ -19,6 +19,11 @@ class ReplyObserver
     {
         //
     }
+
+    public function deleted(Reply $reply){
+        $reply->topic->decrement('reply_count', 1);
+    }
+
     public function created(Reply $reply){
         $topic = $reply->topic;
         $topic->increment('reply_count', 1);
