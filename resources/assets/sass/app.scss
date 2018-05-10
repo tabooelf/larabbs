@@ -35,7 +35,6 @@ body {
 
 
 
-
 /* Topic Show Page */
 
 @import "topic_body";
@@ -52,20 +51,6 @@ body {
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -101,23 +86,6 @@ body {
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -158,22 +126,6 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* User profile page */
 
 .users-show-page {
@@ -186,13 +138,19 @@ body {
 
 
 
-
-
-
-
 /* User profile page */
 
 .users-show-page {
+
+    .meta {
+        font-size: .9em;
+        color: #b3b3b3;
+    }
+
+    .reply-content {
+        margin: 6px 0;
+    }
+
     .user-info {
         .thumbnail {
             margin-bottom: 0px;
@@ -221,5 +179,21 @@ body {
 
     .pagination {
         margin: 12px 0;
+    }
+}
+
+.topic-reply {
+    hr {
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+
+    a {
+        color: inherit;
+    }
+
+    .meta {
+        font-size: .9em;
+        color: #b3b3b3;
     }
 }
