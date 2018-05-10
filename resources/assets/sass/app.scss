@@ -35,6 +35,7 @@ body {
 
 
 
+
 /* Topic Show Page */
 
 @import "topic_body";
@@ -51,6 +52,7 @@ body {
         }
     }
 }
+
 
 
 
@@ -86,6 +88,7 @@ body {
         }
     }
 }
+
 
 
 
@@ -126,6 +129,7 @@ body {
 
 
 
+
 /* User profile page */
 
 .users-show-page {
@@ -135,6 +139,7 @@ body {
         }
     }
 }
+
 
 
 
@@ -195,5 +200,21 @@ body {
     .meta {
         font-size: .9em;
         color: #b3b3b3;
+    }
+}
+
+
+/* Notifications badge */
+
+.notifications-badge {
+    margin-top: -1;
+
+    .badge-fade {
+        background-color: #EBE8E8;
+    }
+
+    .badge-hint {
+        background-color: #d15b47 !important;
+        ;
     }
 }
